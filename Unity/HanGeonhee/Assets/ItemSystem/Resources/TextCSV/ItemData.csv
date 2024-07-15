@@ -1,0 +1,8 @@
+Code,Name,Type,Description
+0,ConcussionGrenade,Consume,"충격 수류탄"
+1,FireGrenade,Consume, "화염 수류탄"
+2,HealingPotion,CoolDown, "회복약"
+3,CybotPeanut,Import, "피넛, 10% 확률로 피해를 80% 완화합니다."
+4,RepairKit,CoolDown,"수리 키트"
+5,TaserGun,Weapon,"테이저 건, 장탄수 4발"
+6,PulseGun,Weapon,"펄스 건, 장탄수 12발"
