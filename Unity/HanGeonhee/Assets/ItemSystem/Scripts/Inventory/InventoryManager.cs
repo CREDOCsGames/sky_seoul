@@ -22,6 +22,19 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] Transform invMain;
 
+    [SerializeField] ViewInfo viewInfo;
+
+    [SerializeField] Animator animator;
+
+    private enum InventoryState
+    {
+        None,
+        PlayMenu,
+        Inventory
+    }
+
+    private InventoryState state;
+
     public Transform InvMain
     {
         get { return invMain; }
@@ -66,11 +79,18 @@ public class InventoryManager : MonoBehaviour
         ItemAddInventory(6);
 
         invObj.SetActive(false);
+
+        state = InventoryState.None;
     }
 
     private void OnDisable()
     {
         InputManager.Instance.keyDownAction -= OpenInventory;
+    }
+
+    public void SetItemInfomation(int code)
+    {
+        viewInfo.ViewInfomation(code);
     }
 
     public void ItemAddInventory(int code, int count = 1)
@@ -139,13 +159,28 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            if (!invObj.activeSelf)
+            if (state == InventoryState.None)
             {
-                invObj.SetActive(true);
+                animator.SetTrigger("PlayMenu");
+                state = InventoryState.PlayMenu; 
             }
-            else
+            else if(state == InventoryState.PlayMenu)
             {
-                invObj.SetActive(false);
+                animator.SetTrigger("Inventory");
+                state = InventoryState.Inventory;
+            }
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(state == InventoryState.PlayMenu)
+            {
+                animator.SetTrigger("Close");
+                state = InventoryState.None;
+            }
+            else if(state == InventoryState.Inventory)
+            {
+                animator.SetTrigger("Close");
+                state = InventoryState.PlayMenu;
             }
         }
     }
@@ -413,7 +448,7 @@ public class InventoryManager : MonoBehaviour
 
     private string GetName(int itemCode)
     {
-        return TextManager.Instance.LoadString("ItemLanguage",itemCode);
+        return TextManager.Instance.LoadString("ItemNameLanguage",itemCode);
     }
 
     private void Swap(List<DragObject> list, int first, int second)

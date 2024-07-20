@@ -8,6 +8,9 @@ public class TaserGun : WeaponItem, IWeaponReload
     {
         maxAmmo = 4;
         currentAmmo = maxAmmo;
+
+        attackSpeed = 4f;
+        attackDamage = 1f;
     }
 
     public override void AttackEffect()

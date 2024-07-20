@@ -35,7 +35,6 @@ public class ItemManager : SingletonManager<ItemManager>
         saveItem.code = code;
         saveItem.name = TextManager.Instance.LoadString("ItemData", code, "Name");
         saveItem.type = TextManager.Instance.LoadString("ItemData", code, "Type");
-        saveItem.description = TextManager.Instance.LoadString("ItemData", code, "Description");
 
         return saveItem;
     }

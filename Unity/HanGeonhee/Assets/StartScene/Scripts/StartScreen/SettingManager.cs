@@ -109,7 +109,7 @@ public class SettingManager : MonoSingletonManager<SettingManager>
     {
         InputManager.Instance.keyDownAction += OptionKeyDown;
 
-        SetLoadData();
+        //SetLoadData();
 
         OptionTextSetting();
 

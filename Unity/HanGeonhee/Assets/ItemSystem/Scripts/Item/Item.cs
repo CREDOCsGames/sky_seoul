@@ -10,7 +10,6 @@ public class Item
     public string name;
 
     public string type;
-    public string description;
 }
 
 public class ConsumeItem : Item
@@ -80,6 +79,10 @@ public class WeaponItem : Item
 
     public int currentAmmo;
 
+    public float attackSpeed;
+
+    public float attackDamage;
+
     public virtual void AttackEffect()
     {
         Debug.Log("기본 공격을 했습니다.");
@@ -103,7 +106,7 @@ public interface IWeaponReload
 
 public class StackConsumeItem : ConsumeItem
 {
-    protected int maxHold;
+    public int maxHold;
 
     protected int hold = 1;
 

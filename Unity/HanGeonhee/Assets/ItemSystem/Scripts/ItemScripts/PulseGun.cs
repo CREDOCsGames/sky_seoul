@@ -9,6 +9,10 @@ public class PulseGun : WeaponItem, IWeaponReload
         maxAmmo = 12;
 
         currentAmmo = maxAmmo;
+
+        attackSpeed = 1.2f;
+
+        attackDamage = 33;
     }
 
     public override void AttackEffect()

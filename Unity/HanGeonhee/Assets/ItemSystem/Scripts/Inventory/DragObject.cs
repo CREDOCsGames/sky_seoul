@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler , IPointerEnterHandler
+public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler , IPointerClickHandler
 {
     public static GameObject dragGameObject;
 
@@ -59,8 +59,8 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("아이템 이름 : " + TextManager.Instance.LoadString("ItemLanguage",itemCode));
+        PlayerManager.Instance.Inventory.SetItemInfomation(itemCode);
     }
 }

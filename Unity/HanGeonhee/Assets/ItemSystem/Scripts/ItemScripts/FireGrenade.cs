@@ -6,7 +6,7 @@ public class FireGrenade : StackConsumeItem
 {
     public FireGrenade()
     {
-        maxHold = 4;
+        maxHold = 3;
     }
 
     public override void UseEffect()
