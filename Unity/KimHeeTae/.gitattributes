@@ -1,0 +1,6 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+Assets/map/model/A1_1.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/map/model/A1_2.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/map/model/A1_3.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/map/model/A2.fbx filter=lfs diff=lfs merge=lfs -text
