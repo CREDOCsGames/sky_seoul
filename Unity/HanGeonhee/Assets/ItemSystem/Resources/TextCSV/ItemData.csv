@@ -1,8 +1,0 @@
-Code,Name,Type,English,Korean
-0,ConcussionGrenade,Consume,"Max Possession : <MP>","최대 소지 : <MP>"
-1,FireGrenade,Consume,"Max Possession : <MP>","최대 소지 : <MP>"
-2,HealingPotion,CoolDown,"Cooldowns : <CD>","재사용 대기시간 : <CD>"
-3,CybotPeanut,Import,"Defense : <DF>","방어력 : <DF>"
-4,RepairKit,CoolDown,"Cooldowns : <CD>","재사용 대기시간 : <CD>"
-5,TaserGun,Weapon,"Weapons that can stop monsters from doing things</n></n>Ammo : <AC></n>Attack Speed : <AS></n>Attack Power : <AP>","몬스터의 행동을 막을 수 있는 무기</n></n>탄약수 : <AC></n>공격 속도 : <AS></n>공격력 : <AP>"
-6,PulseGun,Weapon,"Weapon that deals damage to monsters</n></n>Ammo : <AC></n>Attack Speed : <AS></n>Attack Power : <AP>","몬스터에게 데미지를 주는 무기</n></n>탄약수 : <AC></n>공격 속도 : <AS></n>공격력 : <AP>"
